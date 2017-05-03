@@ -1,0 +1,27 @@
+@CHARSET "utf-8";
+ 
+* { 
+}
+ 
+body{
+	width: 80%;
+	margin: 0px auto;
+}
+ 
+hr{
+	height: 1px;
+	background-color: gray;
+}
+
+form{
+	margin-left: 50px;
+}
+
+
+
+
+
+
+
+
+

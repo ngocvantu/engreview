@@ -1,0 +1,180 @@
+@CHARSET "UTF-8";
+
+#chitiet_div_vocal{
+	text-align: center;
+	margin-top: 10px;
+}
+
+#chitiet_span_vocal {
+	font-size: 3em;
+	font-family: cursive;
+	font-weight: bold;
+	padding: 0px 58px;
+	background-color: white;
+	box-shadow: 0px 0px 6px #888888;
+	width: 600px;  
+
+}
+
+#chitiet_span_vocal:HOVER { 
+	background-color: #33CCCC;
+}
+
+#button{
+	margin: 0px auto;
+	margin-top: 20px;
+	text-align: center;
+	
+}
+
+.chitiet_btn{
+	-moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+	-webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+	box-shadow:inset 0px 34px 0px -15px #b54b3a;
+	background-color:#a73f2d;
+	border:1px solid #241d13;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #7a2a1d;
+	
+}
+
+#chitiet_btn_back {
+	left: 300px;
+	top: 125px;
+}
+
+#chitiet_btn_next {
+	right: 300px;
+	top: 125px;
+}
+
+.chitiet_btn:HOVER {
+	background-color:#800000;
+	
+	-moz-box-shadow:inset 0px 34px 0px -15px #800000;
+	-webkit-box-shadow:inset 0px 34px 0px -15px #800000;
+	box-shadow:inset 0px 34px 0px -15px #800000;
+}
+
+.chitiet_btn:ACTIVE {
+	-moz-box-shadow:inset 0px 34px 0px -15px #400000;
+	-webkit-box-shadow:inset 0px 34px 0px -15px #400000;
+	box-shadow:inset 0px 34px 0px -15px #400000;
+	background-color:#400000;
+	top:1px;
+}
+ 
+#chitiet_div_stuff{
+	margin: 20px auto ;
+	width: 662px;
+	font-size: 1.2em;
+}
+
+#chitiet_div_stuff table{ 
+	width: 100%;
+	table-layout: auto;
+	border-collapse: collapse;
+}
+
+
+table  {
+	font-family: verdana,arial,sans-serif;
+	font-size:15px;;
+	color:#333333;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+}
+table th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+}
+table td {
+	border-width: 1px; 
+	padding: 3px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
+	height: 23px;
+}
+
+table tr td:FIRST-CHILD{
+	width: 130px; 
+	font-weight: bold;
+	color: red;
+}
+
+table tr td input {
+	display: none;
+}
+
+form {
+	margin: 0px;
+	padding: 0px;
+}
+
+#chitiet_btn_sua{
+	margin: 10px 0px 10px 137px;
+}
+
+#chitiet_btn_xong{
+	margin: 10px 0px 10px 114px;
+}
+
+.btn_huy {
+	-moz-box-shadow:inset 0px 34px 0px -15px #ffffff;
+	-webkit-box-shadow:inset 0px 34px 0px -15px #ffffff;
+	box-shadow:inset 0px 34px 0px -15px #ffffff;
+	background-color:#ffffff;
+	border:1px solid #241d13;
+	display:inline-block;
+	cursor:pointer;
+	color:black;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #7a2a1d;
+}
+
+.btn_huy:HOVER {
+	-moz-box-shadow:inset 0px 34px 0px -15px #c0c0c0;
+	-webkit-box-shadow:inset 0px 34px 0px -15px #c0c0c0;
+	box-shadow:inset 0px 34px 0px -15px #c0c0c0;
+	background-color:#c0c0c0;
+	border:1px solid #241d13;
+	display:inline-block;
+	cursor:pointer;
+	color:black;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #7a2a1d;
+}
+
+#chitiet_btn_xong{
+	display: none;
+}
+
+#tuvung, #nghia{
+	display: none;
+}
+
+img {
+	width:100%;
+    max-width:300px;
+}
+ 

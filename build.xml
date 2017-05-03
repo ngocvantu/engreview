@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project>
+<project name="engreview" basedir="." default="all">
+	<property file="build.properties" >
+	</property>
+
+
+	<property name="css.dir" >${server.dir}\webapps\${project.name}\css</property>
+	<property name="js.dir" >${server.dir}\webapps\${project.name}\js</property>
+	<property name="meta.dir" >${server.dir}\webapps\${project.name}\META-INF</property>
+	<property name="web.dir" >${server.dir}\webapps\${project.name}\WEB-INF</property>
+	<property name="build.dir" value="${web.dir}/classes" >
+	</property>
+
+
+	<target name="print_ant_prop">
+		<echo>${ant.project.name}</echo>
+		<echo>The full dir of the build file: ${ant.file}</echo>
+		<echo>Ant version: ${ant.version}</echo>
+		<echo>Project dir: ${basedir}</echo>
+		<echo>Java version: ${ant.java.version}</echo>
+		<echo>=================</echo>
+		<echo>Sever dir == ${server.dir}</echo>
+		<echo>CSS dir == ${css.dir}</echo>
+		<echo>JS dir == ${js.dir}</echo>
+		<echo>META-INF dir == ${meta.dir}</echo>
+		<echo>WEB-INF dir == ${web.dir}</echo>
+	</target>
+
+
+	<path id="master-classpath">
+		<fileset dir="WebContent\\WEB-INF\\lib" includes="*.jar" />
+		<fileset dir="${server.dir}/bin" includes="*.jar" />
+		<fileset dir="${server.dir}/lib" includes="*.jar" />
+	</path>
+
+	<target name="copy" depends="print_ant_prop" >
+		<delete dir="${css.dir}" >
+		</delete>
+		<delete dir="${js.dir}" >
+		</delete>
+		<delete dir="${web.dir}/classes" >
+		</delete>
+		<!--		<sleep milliseconds="10000" />  -->
+		<copy todir="${css.dir}">
+			<fileset dir="WebContent\\css" >
+			</fileset>
+		</copy>
+		<copy todir="${js.dir}">
+			<fileset dir="WebContent\\js">
+			</fileset>
+		</copy>
+
+		<copy todir="${web.dir}/classes">
+			<fileset dir="src">
+				<include name="*.xml" />
+			</fileset>
+		</copy>
+
+		<copy todir="${server.dir}/webapps/${project.name}">
+			<fileset dir="WebContent">
+				<include name="*.jsp" />
+				<include name="*.ico" />
+			</fileset>
+		</copy>
+
+		<tstamp>
+			<format property="timestamp" pattern="yyyy-MM-dd HH:mm:ss" />
+		</tstamp>
+		
+		<echo message="${timestamp}" ></echo>
+
+		<copy todir="${meta.dir}">
+			<fileset dir="WebContent/META-INF">
+				<include name="*.MF" />
+			</fileset>
+		</copy>
+
+		<copy todir="${web.dir}">
+			<fileset dir="WebContent/WEB-INF">
+				<include name="*.xml" />
+			</fileset>
+		</copy>
+
+		<copy todir="${web.dir}">
+			<fileset dir="WebContent/WEB-INF">
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="build" depends="copy" description="Compile source tree java files">
+		<mkdir dir="${build.dir}"/>
+		<javac destdir="${build.dir}" fork="true" includeantruntime="true"  source="1.7" target="1.7">
+			<src  path="src"/>
+			<classpath refid="master-classpath"/>
+		</javac>
+	</target>
+
+
+	<target name="all" depends="build" >
+		<echo>Successfully build project</echo>
+	</target>
+
+
+	<target name="clean" description="Clean output directories">
+		<delete>
+			<fileset dir="${web.dir}/classes">
+			</fileset>
+		</delete>
+	</target>
+</project>
