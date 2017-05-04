@@ -119,7 +119,7 @@ INSERT INTO `tuvung` (`id`, `tuvung`, `nghia`, `vidu1`, `vidu2`, `tuloai`, `noih
 (347, 'consider', 'suy xét', 'i considered bying the cd', 'after considering all the option', 'v', '600', '', '', '2016-03-31', 'unit 3', 0, 0),
 (348, 'cover', 'bao gồm', 'the warranty covers the cost of all reparing service', '', '', '600', '', '', '2016-03-31', 'unit 3', 0, 0),
 (349, 'expire', 'kết thúc, hết hạn', 'my contract with Toshiba company will expire next year', '', 'v', '600', '', '', '2016-03-31', 'unit 3', 0, 0),
-(350, 'frequently', 'phổ biến, thông thường', 'appliances frequently come with a one-year warranty', '', 'adv', '600', 'widespread', '', '2016-03-31', 'unit 3', 0, 0),
+(350, 'frequent ly', 'phổ biến, thông thường', 'appliances frequently come with a one-year warranty', '', 'adv', '600', 'widespread', '', '2016-03-31', 'unit 3', 0, 0),
 (351, 'imply', 'nghĩa là', '', '', 'v', '600', '', '', '2016-03-31', 'unit 3', 0, 0),
 (352, 'reputation', 'danh tiếng', 'the reputation of this company is good', '', 'n', '600', '', '', '2016-03-31', 'unit 3', 0, 0),
 (353, 'variety', 'sự đa dạng', '', '', '', '600', '', '', '2016-04-01', 'unit 3', 0, 0),
