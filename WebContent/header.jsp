@@ -49,6 +49,7 @@ li a.active {
   <li><a id="homkia" href="<%=request.getContextPath()%>/homkia">Hôm kia</a></li> 
   <li><a id="fibonaci" href="<%=request.getContextPath()%>/fibonaci">Fibonaci</a></li>
   <li><a id="ontap" href="<%=request.getContextPath()%>/ontap">Ôn tập</a></li>
+  <li><a id="filter" href="<%=request.getContextPath()%>/chaofilter">Chao Filter</a></li>
   
   <li><a id="theodoi" href="<%=request.getContextPath()%>/theodoi">Theo dõi</a></li>
 </ul>
