@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.1.12
 -- http://www.phpmyadmin.net
 --
@@ -104,7 +104,7 @@ INSERT INTO `tuvung` (`id`, `tuvung`, `nghia`, `vidu1`, `vidu2`, `tuloai`, `noih
 (332, 'competition', 'in the competition , Hector has come out on top', 'in the competition , Hector has come out on top', '', '', '600', 'contest of struggle', '', '2016-03-31', 'unit 2', 0, 0),
 (333, 'contest', 'cuộc thi', 'be prepare for the contest', '', '', '600', '', '', '2016-03-31', 'unit 2', 0, 10),
 (334, 'consume', 'tiêu thụ', 'english plane consume all my time this term and consume all my budget', '', '', '600', 'absort, use up', '', '2016-03-31', 'unit 2', 0, 0),
-(335, 'convince', 'thuyết phục', '', '', '', '600', 'persuade', '', '2016-03-31', 'unit 2', 0, 0),
+(335, 'convince', 'thuyết   phục', '', '', '', '600', 'persuade', '', '2016-03-31', 'unit 2', 0, 0),
 (336, 'currently', 'hiện tại, hiện nay', '', '', 'adv', '600', 'now', '', '2016-03-31', 'unit 2', 0, 0),
 (337, 'fad', 'mốt', 'it is just a fad', '', 'n', '600', 'a craize', '', '2016-03-31', 'unit 2', 0, 0),
 (338, 'inspiration', 'cảm hứng', 'where do you get the inspiration', 'we must inspire the customer to buy our product', 'n', '600', '', '', '2016-03-31', 'unit 2', 0, 0),
