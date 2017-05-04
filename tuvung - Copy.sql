@@ -112,7 +112,7 @@ INSERT INTO `tuvung` (`id`, `tuvung`, `nghia`, `vidu1`, `vidu2`, `tuloai`, `noih
 (340, 'persuation', 'sự thuyết phục', 'we use different methods of persuation to to get people to buy our product', '', '', '600', 'the power of influence', '', '2016-03-31', 'unit 2', 0, 0),
 (341, 'productive', 'năng suất', '', '', 'adj', '600', '', '', '2016-03-31', 'unit 2', 0, 0),
 (342, 'satisfaction', 'sự thỏa mãn', '', '', 'happiness', '600', '', '', '2016-03-31', 'unit 2', 0, 0),
-(343, 'characteristic', 'đặc điểm (bề ngoài)', 'the sale person has an annoying characteristic', '', 'adj', '600', 'revealing someone traits, an individual trait', '', '2016-03-31', 'unit 3', 0, 0),
+(343, 'characteristic', 'đặc điểm (bề ngoài)', 'the sale  person has an annoying characteristic', '', 'adj', '600', 'revealing someone traits, an individual trait', '', '2016-03-31', 'unit 3', 0, 0),
 (344, 'consequence', 'hậu quả', 'as a consequence of not having seen the dentist for 2 years, Linda had several cavities', '', '', '600', '', '', '2016-03-31', 'unit 3', 0, 0),
 (345, 'cavity', 'lỗ sâu răng', '', '', '', '600', '', '', '2016-03-31', 'unit 3', 0, 0),
 (346, 'trait', 'đặc điểm', 'List and briefly describe important traits of today s human resource managers', '', '', '600', '', '', '2016-03-31', 'unit 3', 0, 0),
