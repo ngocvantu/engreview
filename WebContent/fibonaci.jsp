@@ -1,5 +1,4 @@
-<%@page import="java.util.List"%>
-<%@page import="com.object.TuVung"%>
+ 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" 
@@ -47,10 +46,7 @@ a.linktuvung:HOVER {
 </head>
 <body>
 	<%@ include file="/header.jsp" %> 
-	<hr>
-		<%List<TuVung> listTuVung = (List<TuVung>)request.getAttribute("listTuVung");
-		%>
-		Số từ vựng fibonaci: <%=listTuVung.size() %> <br>
+	<hr> <br>
 	<c:set var="i" value="1" scope="page" />
 	<c:set var="j" value="1" scope="page" />
 	<c:forEach items="${listTuVung}"  var="tuvung" >
