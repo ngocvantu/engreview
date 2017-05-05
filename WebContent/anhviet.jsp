@@ -47,6 +47,7 @@ a.linktuvung:HOVER {
 </style>
 </head>
 <body>
+http://www.journaldev.com/1933/java-servlet-filter-example-tutorial
 	<%@ include file="/header.jsp" %> 
 	<hr> 
 	<br>
