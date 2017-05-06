@@ -15,7 +15,7 @@
 
 <%@ include file="/header.jsp" %> <hr> 
 <!-- ===============================BODY==================================== -->
-		<form action="<%=request.getContextPath()%>/sua?id=${listTuVung.id }" method="post" >
+		<form action="<%=request.getContextPath()%>/sua?id=${listTuVung.id }" enctype="multipart/form-data" acceptcharset="UTF-8" method="post" >
 		Từ vựng: <c:out value="${listTuVung.tuvung }"/><input id="tuvung" name="tuvung" type="text" size="50" value="${listTuVung.tuvung }" > <br>
 		Nghĩa: <c:out value="${listTuVung.nghia }"/><input id="nghia" name="nghia" type="text" size="50"  value="${listTuVung.nghia }" ><br>
 		<div id="chitiet_div_vocal" class="div_all all chitiet_div" >
@@ -74,6 +74,7 @@
 			</tr> 
 			<tr>
 				<td>Ảnh:</td><td align="center"><img width="300px" src="<%=request.getContextPath()%>/${listTuVung.ghichu }" ></td>
+				<td><input id="anh" type="file" name="uploadFile" ></td>
 			</tr> 
 		</table>
 		<button type="button" id="chitiet_btn_sua" class="btn_all all chitiet_btn" onclick="sua()" >Sửa</button>
@@ -104,6 +105,7 @@
 				$("table tr td span").css("display","none");
 				$("#tuvung").css("display","inline");
 				$("#nghia").css("display","inline");
+				$("#anh").css("display","inline");
 			} else {
 				$('#chitiet_btn_sua').removeClass("btn_huy");
 				$('#chitiet_btn_xong').css("display","none");
@@ -111,6 +113,7 @@
 				$("table tr td span").css("display","inline");
 				$("#tuvung").css("display","none");
 				$("#nghia").css("display","none");
+				$("#anh").css("display","none");
 			}
 		}
 		
