@@ -73,8 +73,8 @@
 				<input id="solanon" name="solanon" type="text" size="50" value="${listTuVung.solanon }"></td>
 			</tr> 
 			<tr>
-				<td>Ảnh:</td><td align="center"><img width="300px" src="<%=request.getContextPath()%>/${listTuVung.ghichu }" ></td>
-				<td><input id="anh" type="file" name="uploadFile" ></td>
+				<td>Ảnh:</td><td align="center"><img width="300px" src="<%=request.getContextPath()%>/${listTuVung.ghichu }" >
+				<input id="anh" type="file" name="uploadFile" ></td>
 			</tr> 
 		</table>
 		<button type="button" id="chitiet_btn_sua" class="btn_all all chitiet_btn" onclick="sua()" >Sửa</button>
@@ -103,6 +103,7 @@
 				$('#chitiet_btn_xong').css("display","inline");
 				$("table tr td input").css("display","inline");
 				$("table tr td span").css("display","none");
+				$("table tr td img").css("display","none");
 				$("#tuvung").css("display","inline");
 				$("#nghia").css("display","inline");
 				$("#anh").css("display","inline");
@@ -111,6 +112,7 @@
 				$('#chitiet_btn_xong').css("display","none");
 				$("table tr td input").css("display","none");
 				$("table tr td span").css("display","inline");
+				$("table tr td img").css("display","inline");
 				$("#tuvung").css("display","none");
 				$("#nghia").css("display","none");
 				$("#anh").css("display","none");

@@ -290,6 +290,7 @@ public class TuVungUtil {
 	         tuVung.setTudongnghia(tudongnghia);
 	         tuVung.setTutrainghia(tutrainghia);
 	         tuVung.setNgaynhap(ngaynhap);
+	         tuVung.setGhichu(ghichu);
 	         tuVung.setDathuoc(dathuoc);
 	         tuVung.setSolanon(solanon);
 	         

@@ -29,7 +29,7 @@ import com.object.TuVung;
  */
 @WebServlet("/nhaptuvung")
 public class NhapTuvung extends HttpServlet {
-	private static final String UPLOAD_DIRECTORY = "uploadFiles";
+	public static final String UPLOAD_DIRECTORY = "uploadFiles";
 	private static final long serialVersionUID = 1L;
 
 	/**
