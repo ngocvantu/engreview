@@ -120,11 +120,11 @@
 		}
 		
 		function next(id) {
-			window.location.href="<%=request.getContextPath()%>" + "/chitiet?id=" + (id + 1) ;
+			window.location.href="<%=request.getContextPath()%>" + "/chitiet?tip=next&id=" + (id + 1) ;
 		}
 		
 		function back(id) {
-			window.location.href="<%=request.getContextPath()%>" + "/chitiet?id=" + (id - 1) ;
+			window.location.href="<%=request.getContextPath()%>" + "/chitiet?tip=back&id=" + (id - 1) ;
 		}
 	</script>
 </body>

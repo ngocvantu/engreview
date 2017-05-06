@@ -248,6 +248,27 @@ public class TuVungUtil {
 		return tuvung;
 	}
 	
+	public static TuVung getTuVungPrev(int id) {
+		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+		Session session =  sessionFactory.openSession();
+		session.beginTransaction();  
+		Query query = session.createQuery("FROM TuVung where id <= :mid order by id DESC");
+		query.setParameter("mid", id);
+		query.setMaxResults(1);
+		TuVung tuvung = null;
+		try {
+			  tuvung = (TuVung) query.list().get(0);
+		} catch (Exception e) { 
+			return null;
+		} 
+		if(tuvung!=null){
+			TuVungUtil.updateSoLanOn(tuvung.getId() + "");
+		}
+		session.getTransaction().commit();
+		session.close();
+		return tuvung;
+	}
+	
 	public static TuVung getTuVungLast( ) {
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session =  sessionFactory.openSession();
