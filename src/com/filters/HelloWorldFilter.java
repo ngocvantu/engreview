@@ -26,12 +26,11 @@ public class HelloWorldFilter implements Filter {
 		HttpServletRequest request = (HttpServletRequest)req;
 		HttpServletResponse response = (HttpServletResponse)res;
 		
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
+//		response.setContentType("text/html");
+		System.out.println("hellow filter");
 		
-		out.print("chao filter");
-		
-		return;
+		filter.doFilter(req, res);
+//		return;
 	}
 
 	@Override

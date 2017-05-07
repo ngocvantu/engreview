@@ -14,13 +14,22 @@
     <servlet-class>com.servlet.AnhViet</servlet-class>
     <load-on-startup>1</load-on-startup>
   </servlet>
+   
+  <filter>
+  	<filter-name>GZIPFilter</filter-name>
+  	<filter-class>com.filters.GZIPFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>GZIPFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
   
   <filter>
-  	<filter-name>HelloWorldFilter</filter-name>
+  	<filter-name>hellofilter</filter-name>
   	<filter-class>com.filters.HelloWorldFilter</filter-class>
   </filter>
   <filter-mapping>
-  	<filter-name>HelloWorldFilter</filter-name>
-  	<url-pattern>/chaofilter</url-pattern>
+  	<filter-name>hellofilter</filter-name>
+  	<url-pattern>/*</url-pattern>
   </filter-mapping>
 </web-app>
