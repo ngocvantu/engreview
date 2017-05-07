@@ -32,7 +32,7 @@
 			}
 		}
 		if(lastVisited == null){
-			lastVisited = cookie;
+			lastVisited = cookie; 
 		}
 	%>
 	last visited: <%=lastVisited.getValue() %>
