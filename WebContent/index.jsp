@@ -1,3 +1,6 @@
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.text.DateFormat"%>
+<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
@@ -10,7 +13,29 @@
 <body>
 	<%@ include file="/header.jsp" %> 
 	<hr>
-	hello review
+	hello review <br>
+	
+	<%
+		DateFormat df = new SimpleDateFormat("MM/dd/yyyy-HH:mm:ss");
+		
+		Cookie[] cookies = request.getCookies();
+		String timestamp = df.format(new Date());
+		System.out.print(timestamp);
+		Cookie cookie = new Cookie("timestamp", timestamp);
+		response.addCookie(cookie);
+		
+		Cookie lastVisited = null;
+		for(int i = 0; i< cookies.length; i++){
+			if(cookies[i].getName().equals("timestamp")){
+				lastVisited = cookies[i];
+				break;
+			}
+		}
+		if(lastVisited == null){
+			lastVisited = cookie;
+		}
+	%>
+	last visited: <%=lastVisited.getValue() %>
 	<a href="<%=request.getContextPath()%>/nhaptuvung" >list vocal</a>
 	Số từ vựng: <%=request.getSession().getAttribute("sotuvung") %>
 	<div id="divtest" ></div>
