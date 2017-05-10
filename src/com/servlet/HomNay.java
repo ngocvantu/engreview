@@ -20,6 +20,7 @@ import com.object.TuVung;
 @WebServlet("/homnay")
 public class HomNay extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	TuVungUtil TuVungUtil = new TuVungUtil();
        
     /**
      * @see HttpServlet#HttpServlet()

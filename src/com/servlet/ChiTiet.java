@@ -19,6 +19,7 @@ import com.object.TuVung;
 @WebServlet("/chitiet")
 public class ChiTiet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	TuVungUtil TuVungUtil = new TuVungUtil();
        
     /**
      * @see HttpServlet#HttpServlet()

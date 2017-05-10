@@ -31,6 +31,7 @@ import com.object.TuVung;
 public class NhapTuvung extends HttpServlet {
 	public static final String UPLOAD_DIRECTORY = "uploadFiles";
 	private static final long serialVersionUID = 1L;
+	TuVungUtil TuVungUtil = new TuVungUtil();
 
 	/**
 	 * @see HttpServlet#HttpServlet()

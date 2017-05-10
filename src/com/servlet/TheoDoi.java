@@ -21,6 +21,7 @@ import com.object.TuVung;
 public class TheoDoi extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
+	TuVungUtil TuVungUtil = new TuVungUtil();
     /**
      * @see HttpServlet#HttpServlet()
      */

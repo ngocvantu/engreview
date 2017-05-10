@@ -31,6 +31,7 @@ import com.object.TuVung;
 public class XuatFile extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final String UPLOAD_DIRECTORY = "uploadFiles";
+	TuVungUtil TuVungUtil = new TuVungUtil();
        
     /**
      * @see HttpServlet#HttpServlet()

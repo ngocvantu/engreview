@@ -22,7 +22,7 @@ public class TuVungUtil {
 	Connection connection;
 	PreparedStatement statement;
 	
-	public static void xoa(String id) {
+	public  void xoa(String id) {
 		int id1 = Integer.parseInt(id);
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session  session =   sessionFactory.openSession();
@@ -37,7 +37,7 @@ public class TuVungUtil {
 		session.close();
 	}
 	
-	public static List<TuVung> getAllTuVung() {
+	public  List<TuVung> getAllTuVung() {
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session =  sessionFactory.openSession();
 		session.beginTransaction();
@@ -51,7 +51,7 @@ public class TuVungUtil {
 		return list;
 	}
 	
-	public static List<TuVung> getAllTuVungChuaThuoc() {
+	public  List<TuVung> getAllTuVungChuaThuoc() {
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session =  sessionFactory.openSession();
 		session.beginTransaction();
@@ -66,7 +66,7 @@ public class TuVungUtil {
 		return list;
 	}
 	
-	public static List<TuVung> getAllTuVungToeic() {
+	public  List<TuVung> getAllTuVungToeic() {
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session =  sessionFactory.openSession();
 		session.beginTransaction();
@@ -81,7 +81,7 @@ public class TuVungUtil {
 		return list;
 	}
 	
-	public static List<TuVung> getAllTuVungHomqua() {
+	public  List<TuVung> getAllTuVungHomqua() {
 		List<TuVung> listTuVung = new ArrayList<TuVung>();
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session =  sessionFactory.openSession();
@@ -102,7 +102,7 @@ public class TuVungUtil {
 		return listTuVung;
 	}
 	
-	public static List<TuVung> getAllTuVungHomNay() {
+	public  List<TuVung> getAllTuVungHomNay() {
 		List<TuVung> listTuVung = new ArrayList<TuVung>();
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session =  sessionFactory.openSession();
@@ -123,7 +123,7 @@ public class TuVungUtil {
 		return listTuVung;
 	}
 	
-	public static List<TuVung> getAllTuVungDays(long diff) {
+	public  List<TuVung> getAllTuVungDays(long diff) {
 		List<TuVung> listTuVung = new ArrayList<TuVung>();
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session =  sessionFactory.openSession();
@@ -144,7 +144,7 @@ public class TuVungUtil {
 		return listTuVung;
 	}
 	
-	public static List<TuVung> getAllTuVungFibonaci() {
+	public  List<TuVung> getAllTuVungFibonaci() {
 		List<TuVung> listTuVung = new ArrayList<TuVung>();
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session =  sessionFactory.openSession();
@@ -176,7 +176,7 @@ public class TuVungUtil {
 		return listTuVung;
 	}
 	
-	public static List<TuVung> getAllTuVungHomKia() {
+	public  List<TuVung> getAllTuVungHomKia() {
 		List<TuVung> listTuVung = new ArrayList<TuVung>();
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session =  sessionFactory.openSession();
@@ -197,7 +197,7 @@ public class TuVungUtil {
 		return listTuVung;
 	}
 	
-	public static List<TuVung> getTuVungByOrder(int order) {
+	public  List<TuVung> getTuVungByOrder(int order) {
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session =  sessionFactory.openSession();
 		session.beginTransaction();
@@ -210,7 +210,7 @@ public class TuVungUtil {
 		session.close();
 		return list;
 	}
-	public static TuVung getTuVungById2(int id) {
+	public  TuVung getTuVungById2(int id) {
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session =  sessionFactory.openSession();
 		session.beginTransaction();  
@@ -227,7 +227,7 @@ public class TuVungUtil {
 		
 	}
 	
-	public static TuVung getTuVungById(int id) {
+	public  TuVung getTuVungById(int id) {
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session =  sessionFactory.openSession();
 		session.beginTransaction();  
@@ -241,14 +241,14 @@ public class TuVungUtil {
 			return null;
 		} 
 		if(tuvung!=null){
-			TuVungUtil.updateSoLanOn(tuvung.getId() + "");
+			this.updateSoLanOn(tuvung.getId() + "");
 		}
 		session.getTransaction().commit();
 		session.close();
 		return tuvung;
 	}
 	
-	public static TuVung getTuVungPrev(int id) {
+	public  TuVung getTuVungPrev(int id) {
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session =  sessionFactory.openSession();
 		session.beginTransaction();  
@@ -262,14 +262,14 @@ public class TuVungUtil {
 			return null;
 		} 
 		if(tuvung!=null){
-			TuVungUtil.updateSoLanOn(tuvung.getId() + "");
+			this.updateSoLanOn(tuvung.getId() + "");
 		}
 		session.getTransaction().commit();
 		session.close();
 		return tuvung;
 	}
 	
-	public static TuVung getTuVungLast( ) {
+	public  TuVung getTuVungLast( ) {
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session session =  sessionFactory.openSession();
 		session.beginTransaction();  
@@ -281,7 +281,7 @@ public class TuVungUtil {
 		return tuvung;
 	}
 	
-	public static void updateTuVung(String id_, String tuvung, String nghia, String vidu1, 
+	public  void updateTuVung(String id_, String tuvung, String nghia, String vidu1, 
 			String vidu2, String tuloai, String noihoc, String tudongnghia, String tutrainghia,
 			String ngaynhap_, String ghichu, String dathuoc_, String solanon_){
 		int id = Integer.valueOf(id_);
@@ -326,7 +326,7 @@ public class TuVungUtil {
 		
 	}
 	
-	public static void updateSoLanOn(String id_){
+	public  void updateSoLanOn(String id_){
 		int id = Integer.valueOf(id_);
 		Session session = HibernateUtil.getSessionFactory().openSession();
 	    Transaction tx = null;
@@ -346,7 +346,7 @@ public class TuVungUtil {
 		
 	}
 	
-	public static void addTuVung(TuVung tuvung){
+	public  void addTuVung(TuVung tuvung){
 		PreparedStatement statement ;
 		Connection connection;
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");

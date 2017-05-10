@@ -20,6 +20,7 @@ import com.object.TuVung;
 @WebServlet("/homqua")
 public class HomQua extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	TuVungUtil TuVungUtil = new TuVungUtil();
        
     /**
      * @see HttpServlet#HttpServlet()
