@@ -2,6 +2,7 @@ package com.chat;
 
 import java.io.IOException;
 import java.util.HashSet;
+import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -12,12 +13,11 @@ import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
-
-import com.sun.org.apache.xalan.internal.xsltc.runtime.Hashtable; 
+  
 @ServerEndpoint(value = "/chao/{username}")
 public class EchoServer {
 	protected static Set<Session> sessions = new HashSet<Session>();
-	protected static Hashtable userMap = new Hashtable();
+	protected static Hashtable<String, User> userMap = new Hashtable<String, User>();
 	
 	Session session;
 	

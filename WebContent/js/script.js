@@ -8,7 +8,7 @@ function connect() {
 	log.scrollTop = log.scrollHeight;
 	
 	var username = document.getElementById("username").value;
-	var wsURI = "ws://localhost:8080/ChaoStruts/chao/" + username;
+	var wsURI = "ws://45.32.118.97:8080/engreview/chao/" + username;
 	
 	ws =  new WebSocket(wsURI);
 	
@@ -21,8 +21,9 @@ function connect() {
 		var i=0;
 		log.innerHTML += "<br>" + event.data;
 		log.scrollTop = log.scrollHeight;
-//		var audio = new Audio('bong.mp3');
-//		audio.play(); 
+		var audio = new Audio('bong.mp3');
+		audio.play(); 
+		
 	}
 	
 	ws.onclose = function(evt) {
